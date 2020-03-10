@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AndroidToolBox</string>
+    <string name="login_title">Connexion</string>
+    <string name="login_id">identifiant</string>
+    <string name="login_motdepasse">Mot de passe</string>
+    <string name="login_button">Valider</string>
+    <string name="home_bonjour">Bonjour</string>
+    <string name="home_cycledelavie">Cycle de la vie</string>
+    <string name="home_sauvegarde">Sauvegarde</string>
+    <string name="home_permission">Permission</string>
+    <string name="home_webservice">Webservices</string>
+    <string name="login_pseudo">identifiant</string>
+    <string name="cycle_de_vie" />
+    <string name="deconnexion">Déconnexion</string>
+    <string name="Formulaire">Veuillez remplir le formulaire</string>
+    <string name="formulaireNom">Nom</string>
+    <string name="formulaire_Prenom">Prénom</string>
+    <string name="Buttun_Send">Sauvegarder</string>
+    <string name="formulaire_Date">Date</string>
+    <string name="Calendrier">"  "</string>
+</resources>

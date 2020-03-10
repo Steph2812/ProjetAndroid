@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Formulaire">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/formulaireNom"
+        android:layout_width="301dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="60dp"
+        android:hint="@string/formulaireNom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/formulairePrenom"
+        android:layout_width="301dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="60dp"
+        android:hint="@string/formulaire_Prenom"
+        app:layout_constraintEnd_toEndOf="@+id/formulaireNom"
+        app:layout_constraintStart_toStartOf="@+id/formulaireNom"
+        app:layout_constraintTop_toBottomOf="@+id/formulaireNom" />
+
+    <Button
+        android:id="@+id/formulaireButton"
+        android:layout_width="128dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/border"
+        android:text="@string/Buttun_Send"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Calendrier"
+        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintStart_toStartOf="@+id/formulaireDate" />
+
+    <Button
+        android:id="@+id/formulaireDate"
+        android:layout_width="98dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/border"
+        android:text="@string/formulaire_Date"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="@+id/formulairePrenom"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/formulairePrenom"
+        app:layout_constraintTop_toBottomOf="@+id/formulairePrenom" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="248dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/Formulaire"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <TextView
+        android:id="@+id/Calendrier"
+        android:layout_width="125dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/Calendrier"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/formulaireDate"
+        app:layout_constraintTop_toBottomOf="@+id/formulairePrenom" />
+
+    <ImageButton
+        android:id="@+id/formulaireCheck"
+        android:layout_width="60dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/formulaireButton"
+        app:srcCompat="@android:drawable/checkbox_on_background" />
+</androidx.constraintlayout.widget.ConstraintLayout>
