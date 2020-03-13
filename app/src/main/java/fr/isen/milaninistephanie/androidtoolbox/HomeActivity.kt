@@ -10,7 +10,7 @@ class HomeActivity : AppCompatActivity() {
     var textBonjour :String = "Bonjour "
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_home) 
         val login = intent.getStringExtra("login")
         textBonjour += login
         homeBonjour.text = textBonjour
