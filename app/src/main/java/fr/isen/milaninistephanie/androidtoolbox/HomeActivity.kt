@@ -11,8 +11,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        val intent = intent
-        val login = intent.getStringExtra("identifiant")
+        val login = intent.getStringExtra("login")
         textBonjour += login
         homeBonjour.text = textBonjour
         cycledeVie.setOnClickListener {

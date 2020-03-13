@@ -24,12 +24,12 @@
         android:id="@+id/contactDe"
         android:layout_width="142dp"
         android:layout_height="27dp"
-        android:layout_marginTop="72dp"
         android:text="@string/contact_de"
+        app:layout_constraintBottom_toBottomOf="@+id/imageContact"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toEndOf="@+id/imageContact"
-        app:layout_constraintTop_toBottomOf="@+id/contact" />
+        app:layout_constraintTop_toTopOf="@+id/imageContact" />
 
     <ImageView
         android:id="@+id/imageContact"
@@ -40,14 +40,14 @@
         app:layout_constraintTop_toBottomOf="@+id/contact"
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
-    <TextView
-        android:id="@+id/NomContact"
-        android:layout_width="294dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="96dp"
-        android:text="@string/contact_Nom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contactRecycler"
+        android:layout_width="309dp"
+        android:layout_height="323dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/contactDe"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageContact"
         app:layout_constraintTop_toBottomOf="@+id/contactDe" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

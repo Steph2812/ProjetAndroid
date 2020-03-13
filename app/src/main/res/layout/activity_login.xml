@@ -26,14 +26,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="396dp"
-        android:layout_marginEnd="164dp"
         android:background="@drawable/border"
         android:text="@string/login_button"
         android:textColor="@android:color/background_light"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Password"
+        app:layout_constraintStart_toStartOf="@+id/Password"
         app:layout_constraintTop_toBottomOf="@+id/loginTitle" />
 
     <ImageView
@@ -52,14 +50,11 @@
         android:id="@+id/Password"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="60dp"
-        android:inputType="textPassword"
         android:hint="@string/login_motdepasse"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.916"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/loginIdentifiant"
+        app:layout_constraintStart_toStartOf="@+id/loginIdentifiant"
         app:layout_constraintTop_toBottomOf="@+id/loginIdentifiant" />
 
     <com.google.android.material.textfield.TextInputLayout
