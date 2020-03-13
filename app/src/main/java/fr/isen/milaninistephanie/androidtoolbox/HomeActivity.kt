@@ -10,7 +10,7 @@ class HomeActivity : AppCompatActivity() {
     var textBonjour :String = "Bonjour "
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home) 
+        setContentView(R.layout.activity_home)
         val login = intent.getStringExtra("login")
         textBonjour += login
         homeBonjour.text = textBonjour
@@ -32,6 +32,11 @@ class HomeActivity : AppCompatActivity() {
 
         permission.setOnClickListener {
             val intent = Intent(this, ContactActivity::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+        }
+        webservices.setOnClickListener {
+            val intent = Intent(this, WebServiceActivity::class.java)
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
         }
