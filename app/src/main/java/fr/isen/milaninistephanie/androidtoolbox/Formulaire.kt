@@ -21,6 +21,8 @@ class Formulaire : AppCompatActivity() {
     var KEYNOM = "Nom"
     var KEYPRENOM = "Prenom"
     var KEYDATE = "Date"
+    var KEYAGE = "Age"
+    var age:Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_formulaire)
@@ -35,6 +37,11 @@ class Formulaire : AppCompatActivity() {
                 val sdf = SimpleDateFormat("dd/MM/yyyy")
                 Calendrier.text = sdf.format(cal.time)
 
+                val aujourdhui = Calendar.getInstance()
+                age = aujourdhui.get(Calendar.YEAR) - cal.get(Calendar.YEAR)
+                if (aujourdhui.get(Calendar.DAY_OF_YEAR) < cal.get(Calendar.DAY_OF_YEAR)){
+                    age--
+                }
 
             }
         formulaireDate.setOnClickListener {
@@ -46,7 +53,7 @@ class Formulaire : AppCompatActivity() {
             val nom = formulaireNom.text.toString()
             val prenom = formulairePrenom.text.toString()
             val datedenaissance = Calendrier.text.toString()
-            writeJson(nom, prenom, datedenaissance)
+            writeJson(nom, prenom, datedenaissance,age)
 
         }
         formulaireCheck.setOnClickListener {
@@ -56,12 +63,12 @@ class Formulaire : AppCompatActivity() {
 
     }
 
-    private fun writeJson(formulaireNom: String, formulairePrenom: String, Calendrier: String) {
+    private fun writeJson(formulaireNom: String, formulairePrenom: String, calendrier: String?, age: Int) {
         val objet = JSONObject()
         objet.put(KEYNOM, formulaireNom)
         objet.put(KEYPRENOM, formulairePrenom)
-        objet.put(KEYDATE, Calendrier)
-
+        objet.put(KEYDATE, calendrier)
+        objet.put(KEYAGE, age)
 
         // Toast.makeText(this, "Le fichier Json contient : " + json, Toast.LENGTH_LONG).show()
         val json = objet.toString()
@@ -80,7 +87,8 @@ class Formulaire : AppCompatActivity() {
         alert.setMessage(
             " Nom : " + objetMessage.get(KEYNOM) +
                     "\n Prenom : " + objetMessage.get(KEYPRENOM) +
-                    "\n Date de naissance : " + objetMessage.get(KEYDATE)
+                    "\n Date de naissance : " + objetMessage.get(KEYDATE)+
+                    "\n Age : " +objetMessage.get(KEYAGE)
         ).create().show()
     }
 

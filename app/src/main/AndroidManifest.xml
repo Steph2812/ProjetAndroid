@@ -4,6 +4,9 @@
     package="fr.isen.milaninistephanie.androidtoolbox">
 
     <dist:module dist:instant="true" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".JsonActivity"></activity>
+        <activity android:name=".ContactActivity"></activity>
         <activity android:name=".Formulaire" />
         <activity android:name=".CycleDeVie" />
         <activity android:name=".LoginActivity">
