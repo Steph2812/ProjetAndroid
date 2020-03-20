@@ -21,6 +21,7 @@ class ContactAdapter(val contacts:List<String>) : RecyclerView.Adapter<ContactAd
 
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
         holder.contactName.text = contacts[position]
+
     }
 
 

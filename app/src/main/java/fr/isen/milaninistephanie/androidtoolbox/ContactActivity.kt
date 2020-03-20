@@ -20,8 +20,6 @@ class ContactActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact)
-        //contactTest += formulaireNom.text.toString() + formulairePrenom.text.toString()
-        //contactDe.text = contactTest
 
         imageContact.setOnClickListener {
             val pictureDialog = AlertDialog.Builder(this)
@@ -39,8 +37,6 @@ class ContactActivity : AppCompatActivity() {
             //openGalleryForImage()
             //takePicture()
         }
-        // contactRecycler.adapter = ContactAdapter(listOf("Juliette", "Melvin", "Marc"))
-        // contactRecycler.layoutManager = LinearLayoutManager(this)
         if (ActivityCompat.checkSelfPermission(
                 this,
                 android.Manifest.permission.READ_CONTACTS

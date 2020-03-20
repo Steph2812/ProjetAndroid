@@ -18,7 +18,12 @@
     <string name="formulaire_Date">Date</string>
     <string name="Calendrier">"  "</string>
     <string name="contact_Contact">Accès aux informations Android</string>
-    <string name="contact_de">Contact de</string>
+    <string name="contact_de">Contact de Stéphanie MILANINI</string>
     <string name="home_bonjour">"  "</string>
     <string name="contact_Nom" />
+    <string name="nomUser" />
+    <string name="webAdapter_nom" />
+    <string name="postaleAdress" />
+    <string name="AdressEmail" />
+    <string name="home_ble">Bluetooth</string>
 </resources>
