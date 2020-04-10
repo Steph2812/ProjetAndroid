@@ -35,27 +35,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/uuidE"
-        android:layout_width="410dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/uuidE"
-        android:textColor="@color/cardview_dark_background"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/caract_spe"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/caract_spe"
-        app:layout_constraintTop_toBottomOf="@+id/caract_spe" />
-
-    <TextView
         android:id="@+id/propriete"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/Propriete"
         android:textColor="@color/cardview_dark_background"
-        app:layout_constraintEnd_toEndOf="@+id/uuidParent"
+        app:layout_constraintEnd_toEndOf="@id/uuidE"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/uuidParent"
+        app:layout_constraintStart_toStartOf="@id/uuidE"
         app:layout_constraintTop_toBottomOf="@+id/uuidE" />
 
     <TextView
@@ -94,4 +82,12 @@
         app:layout_constraintStart_toEndOf="@+id/button_lecture"
         app:layout_constraintTop_toBottomOf="@+id/valeur"
         app:layout_constraintVertical_bias="0.087" />
+
+    <TextView
+        android:id="@+id/uuidE"
+        android:layout_width="408dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caract_spe" />
 </androidx.constraintlayout.widget.ConstraintLayout>
