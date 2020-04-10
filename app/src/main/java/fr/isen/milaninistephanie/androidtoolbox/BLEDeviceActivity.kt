@@ -39,7 +39,6 @@ class BLEDeviceActivity : AppCompatActivity() {
             status: Int,
             newState: Int
         ) {
-            val intentAction: String
             when (newState) {
                 BluetoothProfile.STATE_CONNECTED -> {
                     runOnUiThread {
