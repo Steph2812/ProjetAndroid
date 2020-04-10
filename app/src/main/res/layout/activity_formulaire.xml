@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".Formulaire">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -43,20 +43,19 @@
         android:id="@+id/formulaireButton"
         android:layout_width="128dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/border"
         android:text="@string/Buttun_Send"
         android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/Calendrier"
-        app:layout_constraintHorizontal_bias="0.408"
-        app:layout_constraintStart_toStartOf="@+id/formulaireDate" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaireDate" />
 
     <Button
         android:id="@+id/formulaireDate"
         android:layout_width="98dp"
         android:layout_height="43dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/border"
         android:text="@string/formulaire_Date"
         android:textColor="@android:color/background_light"
@@ -67,12 +66,16 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="248dp"
-        android:layout_height="48dp"
+        android:layout_width="432dp"
+        android:layout_height="66dp"
         android:layout_marginTop="76dp"
         android:text="@string/Formulaire"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="26sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
@@ -81,7 +84,7 @@
         android:layout_width="125dp"
         android:layout_height="45dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="48dp"
         android:text="@string/Calendrier"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/formulaireDate"
@@ -91,8 +94,10 @@
         android:id="@+id/formulaireCheck"
         android:layout_width="60dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/border"
         app:layout_constraintStart_toEndOf="@+id/formulaireButton"
+        app:layout_constraintTop_toBottomOf="@+id/Calendrier"
         app:srcCompat="@android:drawable/checkbox_on_background" />
 </androidx.constraintlayout.widget.ConstraintLayout>

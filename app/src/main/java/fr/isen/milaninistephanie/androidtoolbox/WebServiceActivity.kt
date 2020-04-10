@@ -1,5 +1,6 @@
 package fr.isen.milaninistephanie.androidtoolbox
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -30,7 +31,7 @@ class WebServiceActivity : AppCompatActivity() {
         val stringReq = StringRequest(Request.Method.GET, url, Response.Listener<String> { response ->
 
             val userResults = parseJson(response)
-            WebRecycler.adapter = WebAdapter(userResults,this)
+            WebRecycler.adapter = WebAdapter(userResults,this,::onUserClicked)
             WebRecycler.layoutManager = LinearLayoutManager(this)
             WebRecycler.visibility = View.VISIBLE
 
@@ -39,7 +40,7 @@ class WebServiceActivity : AppCompatActivity() {
 
         },
             Response.ErrorListener {Toast.makeText(this, "That didn't work", Toast.LENGTH_SHORT).show()} )
-            queue.add(stringReq)
+        queue.add(stringReq)
 
 
     }
@@ -49,5 +50,13 @@ class WebServiceActivity : AppCompatActivity() {
         return  gson.fromJson<User>(response, User::class.java)
     }
 
+   private fun onUserClicked(people: Results) {
+        val intent = Intent(this, WebUserActivity::class.java)
+        intent.putExtra("User", people)
+        startActivity(intent)
+    }
 
 }
+
+
+

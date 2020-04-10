@@ -3,14 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".LoginActivity">
 
     <TextView
         android:id="@+id/loginTitle"
         android:layout_width="207dp"
         android:layout_height="41dp"
-        android:layout_marginBottom="536dp"
         android:fontFamily="sans-serif"
         android:text="@string/login_title"
         android:textAlignment="center"
@@ -19,29 +18,31 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="396dp"
+        android:layout_marginTop="444dp"
         android:background="@drawable/border"
         android:text="@string/login_button"
         android:textColor="@android:color/background_light"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/Password"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/Password"
         app:layout_constraintTop_toBottomOf="@+id/loginTitle" />
 
     <ImageView
         android:id="@+id/loginImageIsen"
-        android:layout_width="300dp"
-        android:layout_height="133dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="327dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="72dp"
         android:importantForAccessibility="no"
         app:layout_constraintEnd_toEndOf="@+id/loginTitle"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="@+id/loginTitle"
         app:layout_constraintTop_toBottomOf="@+id/loginTitle"
         app:srcCompat="@drawable/logoisen" />
@@ -54,6 +55,7 @@
         android:hint="@string/login_motdepasse"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/loginIdentifiant"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/loginIdentifiant"
         app:layout_constraintTop_toBottomOf="@+id/loginIdentifiant" />
 
